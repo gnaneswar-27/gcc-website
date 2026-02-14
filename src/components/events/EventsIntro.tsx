@@ -17,7 +17,7 @@ export default function EventsIntro() {
         </h2>
 
         <p className="mt-8 text-lg text-neutral-700 leading-relaxed">
-          Discover the perfect setting for life's most memorable moments at
+          Discover the perfect setting for life&apos;s most memorable moments at
           Garstang Country Hotel. From intimate daytime gatherings to
           spectacular evening celebrations, our versatile event spaces provide
           an idyllic backdrop along the River Wyre.

@@ -53,15 +53,6 @@ export default function Hero() {
         >
           Hotel • Golf • Weddings • Events
         </motion.p>
-
-        <motion.button
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
-          className="mt-10 px-10 py-4 border border-white hover:bg-white hover:text-black transition-all duration-500 tracking-wider"
-        >
-          Discover More
-        </motion.button>
       </motion.div>
 
       {/* Scroll Indicator */}
