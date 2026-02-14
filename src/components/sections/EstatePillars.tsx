@@ -10,7 +10,7 @@ const pillars = [
     href: '/stay',
   },
   {
-    title: 'Dining',
+    title: 'Restaurant',
     image: '/images/dining.jpg',
     href: '/restaurants',
   },

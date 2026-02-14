@@ -1,34 +1,48 @@
+import Image from 'next/image'
+import Link from 'next/link'
+
 export default function Footer() {
   return (
-    <footer
-      className="bg-[var(--color-deep-green)] text-white pt-16 pb-10 px-6 border-t border-white/10"
-    >
-      <div className="max-w-6xl mx-auto text-center">
-        {/* Estate Name */}
-        <h2 className="text-3xl md:text-4xl mb-8 tracking-wide">
-          Garstang Country Club
-        </h2>
+    <footer className="bg-[var(--color-deep-green)] text-white pt-16 pb-10 px-6 border-t border-white/10">
+      <div className="max-w-6xl mx-auto">
 
-        {/* Divider */}
-        <div className="w-16 h-[1px] bg-white/40 mx-auto mb-10" />
+        {/* Top Section */}
+        <div className="grid md:grid-cols-2 gap-12 items-start">
 
-        {/* Address Block */}
-        <div className="space-y-3 text-sm tracking-wide opacity-80">
-          <p>Garstang Road</p>
-          <p>Lancashire, PR3 1YE</p>
-          <p>United Kingdom</p>
-          <p className="mt-6">+44 (0) 1995 600100</p>
-          <p>info@garstangcountryclub.co.uk</p>
+          {/* LEFT — Logo */}
+          <div>
+            <Link href="/">
+              <Image
+                src="/images/logo-light-1.png"
+                alt="Garstang Country Club Logo"
+                width={220}
+                height={70}
+                className="object-contain"
+                priority
+              />
+            </Link>
+          </div>
+
+          {/* RIGHT — Address Block */}
+          <div className="text-sm tracking-wide opacity-80 space-y-3 md:text-right">
+            <p>Garstang Road</p>
+            <p>Lancashire, PR3 1YE</p>
+            <p>United Kingdom</p>
+            <p className="mt-6">+44 (0) 1995 600100</p>
+            <p>info@garstangcountryclub.co.uk</p>
+          </div>
+
         </div>
 
-        {/* Bottom Divider */}
+        {/* Divider */}
         <div className="w-full h-[1px] bg-white/20 my-12" />
 
-        {/* Copyright */}
-        <p className="text-xs tracking-[0.3em] uppercase opacity-60">
-          © {new Date().getFullYear()} Garstang Country Club
-        </p>
+        {/* Bottom Section */}
+        <div className="flex flex-col md:flex-row justify-between items-center text-xs tracking-[0.3em] uppercase opacity-60">
+          <p>© {new Date().getFullYear()} Garstang Country Club</p>
+        </div>
+
       </div>
     </footer>
-  );
+  )
 }

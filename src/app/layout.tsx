@@ -1,8 +1,7 @@
 import "./globals.css";
 import { Playfair_Display, Inter } from "next/font/google";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
 import SmoothScroll from "@/components/ui/SmoothScroll";
+import ScrollToTop from '@/components/utils/ScrollToTop'
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -30,6 +29,7 @@ export default function RootLayout({
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <body>
         <SmoothScroll />
+        <ScrollToTop />
         {children}
       </body>
     </html>

@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Link from "next/link";
 
 export default function SplitGolfSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -32,13 +33,13 @@ export default function SplitGolfSection() {
             levels.
           </p>
 
-          <button
-            className="relative group px-8 py-3 border border-[var(--color-gold-accent)] text-[var(--color-deep-green)]
- tracking-wide"
+          <Link
+            href="/golf"
+            className="relative group inline-block px-8 py-3 border border-[var(--color-gold-accent)] text-[var(--color-deep-green)] tracking-wide uppercase text-sm transition-all duration-300"
           >
             Explore Golf
             <span className="absolute left-0 bottom-0 h-[1px] w-0 bg-[var(--color-gold-accent)] transition-all duration-500 group-hover:w-full" />
-          </button>
+          </Link>
         </div>
       </div>
     </section>
