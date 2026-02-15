@@ -12,7 +12,7 @@ const pillars = [
   {
     title: 'Restaurant',
     image: '/images/dining.jpg',
-    href: '/restaurants',
+    href: '/restaurant',
   },
   {
     title: 'Weddings',
