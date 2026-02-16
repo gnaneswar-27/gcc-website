@@ -27,7 +27,7 @@ export default function SplitGolfSection() {
       <div className="flex items-center justify-center px-12 py-32 bg-white">
         <div>
           <h2 className="text-4xl mb-6">Championship Golf</h2>
-          <p className="opacity-70 mb-8 leading-relaxed">
+          <p className="text-lg opacity-70 mb-8 leading-relaxed">
             Designed by former PGA Captain Richard Bradbeer, our 18-hole
             parkland course offers a rewarding challenge for players of all
             levels.

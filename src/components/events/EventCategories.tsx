@@ -1,6 +1,6 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 
 export default function EventCategories() {
   const events = [
@@ -25,8 +25,7 @@ export default function EventCategories() {
     {
       title: "Bridal Showers",
       image: "/images/events/event-4.jpg",
-      description:
-        "Spoil the bride-to-be with a tailored celebration!",
+      description: "Spoil the bride-to-be with a tailored celebration!",
     },
     {
       title: "Baby Showers",
@@ -34,13 +33,11 @@ export default function EventCategories() {
       description:
         "Celebrate your newest addition with a baby shower or gender reveal party",
     },
-    
-  ]
+  ];
 
   return (
     <section className="py-28 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
-
         <h2 className="text-3xl md:text-5xl font-playfair text-deep-green text-center mb-20">
           Occasions We Host
         </h2>
@@ -50,10 +47,9 @@ export default function EventCategories() {
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition duration-500"
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition duration-500 "
             >
               <div
                 className="h-72 bg-cover bg-center"
@@ -74,5 +70,5 @@ export default function EventCategories() {
         </div>
       </div>
     </section>
-  )
+  );
 }

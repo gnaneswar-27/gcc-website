@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function BradbeerBistro() {
   return (
-    <section className="py-32 bg-white">
+    <section className="py-32 bg-cream">
       <div className="max-w-6xl mx-auto px-6">
         {/* Heading */}
         {/* Heading */}
@@ -15,7 +15,7 @@ export default function BradbeerBistro() {
           transition={{ duration: 1 }}
           className="text-center mb-20"
         >
-          <h2 className="text-3xl md:text-5xl font-playfair text-deep-green">
+          <h2 className="text-3xl md:text-5xl text-deep-green">
             Bradbeer Bistro
           </h2>
 

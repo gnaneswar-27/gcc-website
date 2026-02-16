@@ -19,13 +19,13 @@ export default function WeddingPackages() {
     {
       title: "The Diamond Package",
       description:
-        "For those looking for the ultimate wedding experience, the Diamond package is the perfect choice.",
+        "For those looking for the ultimate wedding experience.",
       image: "/images/weddings/package-3.jpg",
     },
     {
       title: "The Twilight Package",
       description:
-        "The Twilight package is the perfect choice for couples seeking a stunning evening-only celebration.",
+        "The Twilight package is the perfect choice for those seeking a stunning evening-only celebration.",
       image: "/images/weddings/package-4.jpg",
     },
     {
@@ -48,33 +48,48 @@ export default function WeddingPackages() {
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition duration-500 flex flex-col"
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="group bg-white rounded-3xl overflow-hidden 
+             border border-neutral-200/60
+             hover:border-[var(--color-gold-accent)]
+             transition-all duration-700 
+             flex flex-col"
             >
               {/* Image */}
-              <div
-                className="h-64 bg-cover bg-center"
-                style={{ backgroundImage: `url(${pkg.image})` }}
-              />
+              <div className="relative overflow-hidden">
+                <div
+                  className="h-72 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105"
+                  style={{ backgroundImage: `url(${pkg.image})` }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
+              </div>
 
               {/* Content */}
-              <div className="p-8 flex flex-col flex-grow text-left">
-                <h3 className="text-xl font-playfair text-deep-green">
+              <div className="p-10 flex flex-col flex-grow text-left">
+                <h3 className="text-2xl tracking-wide text-deep-green font-light">
                   {pkg.title}
                 </h3>
 
-                <p className="mt-4 text-neutral-600 text-sm leading-relaxed flex-grow">
+                <p className="mt-4 text-neutral-600 text-[16px] leading-loose font-light flex-grow">
                   {pkg.description}
                 </p>
 
                 <button
-                  className="relative group px-8 py-3 border border-[var(--color-gold-accent)] text-[var(--color-deep-green)]
- tracking-wide"
+                  className="mt-3 inline-flex items-center justify-center
+             px-8 py-3
+             text-sm tracking-[0.25em]
+             text-[var(--color-deep-green)]
+             border border-[var(--color-gold-accent)]
+             relative group"
                 >
                   VIEW DETAILS
-                  <span className="absolute left-0 bottom-0 h-[1px] w-0 bg-[var(--color-gold-accent)] transition-all duration-500 group-hover:w-full" />
+                  <span
+                    className="absolute -bottom-0.5 left-0 h-[1px] w-0
+               bg-[var(--color-gold-accent)]
+               transition-all duration-500
+               group-hover:w-full"
+                  />
                 </button>
               </div>
             </motion.div>

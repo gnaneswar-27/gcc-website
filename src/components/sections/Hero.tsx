@@ -40,7 +40,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2 }}
-          className="text-6xl md:text-7xl tracking-wide"
+          className="text-5xl md:text-7xl tracking-[0.06em] font-normal leading-tight"
         >
           Garstang Country Club
         </motion.h1>
